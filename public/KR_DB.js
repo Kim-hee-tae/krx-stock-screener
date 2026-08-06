@@ -1,3 +1,4 @@
+// 한국 표준시(KST) 갱신 시각: 2026-08-06 23:45:06
 const KR_DB = [
   { symbol: '417310.KS', name: '코람코더원리츠', market: 'KOSPI' },
   { symbol: '339950', name: '아이비김영', market: 'KOSDAQ' },
