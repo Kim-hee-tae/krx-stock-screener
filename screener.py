@@ -1,11 +1,16 @@
-import FinanceDataReader as fdr
+import os
 import pandas as pd
 import numpy as np
+import FinanceDataReader as fdr
 from datetime import datetime, timedelta
-import os
+from zoneinfo import ZoneInfo  # 한국 시간(KST) 설정을 위해 추가
 
 def run_screener():
-    print("1. KRX 전체 종목 목록 수집 중...")
+    # 1. 한국 표준시(KST) 기준 현재 시간 구하기
+    now_kst = datetime.now(ZoneInfo("Asia/Seoul"))
+    now_str = now_kst.strftime("%Y-%m-%d %H:%M:%S")
+
+    print(f"[{now_str} KST] 1. KRX 전체 종목 목록 수집 중...")
     df_krx = fdr.StockListing('KRX')
     df = df_krx[['Market', 'Code', 'Name']].copy()
     df['Market'] = df['Market'].fillna('KONEX')
@@ -19,6 +24,7 @@ def run_screener():
     results = []
     print(f"2. 총 {len(df_filtered)}개 종목 미너비니 기법 스크리닝 진행...")
 
+    # DataReader용 날짜 설정 (zoneinfo 없는 일반 naive datetime 사용)
     end_date = datetime.now()
     start_date = end_date - timedelta(days=500)
 
@@ -85,6 +91,7 @@ def run_screener():
 
         # 1) KR_DB.js 내보내기
         with open('public/KR_DB.js', 'w', encoding='utf-8') as f:
+            f.write(f"// 한국 표준시(KST) 갱신 시각: {now_str}\n")
             f.write("const KR_DB = [\n")
             for _, row in result_df.iterrows():
                 f.write(f"  {{ symbol: '{row['symbol']}', name: '{row['name']}', market: '{row['market']}' }},\n")
@@ -105,7 +112,6 @@ def run_screener():
             </tr>
             """
 
-        now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         html_content = f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -121,7 +127,7 @@ def run_screener():
         table {{ width: 100%; border-collapse: collapse; margin-top: 10px; }}
         th {{ background-color: #212529; color: white; padding: 12px; text-align: left; font-size: 13px; }}
         td {{ padding: 10px 12px; border-bottom: 1px solid #dee2e6; font-size: 14px; }}
-        tr:hover {{ background-color: #f1f3f5; }}
+        tr:hover {{ background-color: #f8f9fa; }}
         .badge {{ padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; color: white; }}
         .badge-kospi {{ background-color: #0052cc; }}
         .badge-kosdaq {{ background-color: #28a745; }}
@@ -131,7 +137,7 @@ def run_screener():
     <div class="container">
         <div class="header">
             <h2>📈 마크 미너비니 트렌드 스크리닝 결과</h2>
-            <p>최종 갱신 시각: {now_str} (UTC 기준) | 포착 종목 수: {len(result_df)}개</p>
+            <p>최종 갱신 시각: {now_str} (KST) | 포착 종목 수: {len(result_df)}개</p>
         </div>
         <table>
             <thead>
