@@ -158,7 +158,7 @@ def run_screener():
         <div class="header">
             <h2>📈 마크 미너비니 트렌드 스크리닝 결과</h2>
             <p>최종 갱신 시각: {now_str} (KST) | 포착 종목 수: {len(result_df)}개</p>
-            <b>모든 투자의 책임은 본인에게 있습니다. 정보는 참조만 하세요<b>
+            <span class="warning">⚠️ 모든 투자의 책임은 본인에게 있습니다. 정보는 참조만 하세요</span>
         </div>
         <table>
             <thead>
