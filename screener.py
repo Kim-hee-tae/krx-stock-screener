@@ -2,8 +2,14 @@ import os
 import pandas as pd
 import numpy as np
 import FinanceDataReader as fdr
+import urllib.request
 from datetime import datetime, timedelta
-from zoneinfo import ZoneInfo  # 한국 시간(KST) 설정을 위해 추가
+from zoneinfo import ZoneInfo
+
+# 404 차단 방지를 위한 기본 User-Agent 글로벌 설정
+opener = urllib.request.build_opener()
+opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')]
+urllib.request.install_opener(opener)
 
 def run_screener():
     # 1. 한국 표준시(KST) 기준 현재 시간 구하기
@@ -11,25 +17,37 @@ def run_screener():
     now_str = now_kst.strftime("%Y-%m-%d %H:%M:%S")
 
     print(f"[{now_str} KST] 1. KRX 전체 종목 목록 수집 중...")
-    df_krx = fdr.StockListing('KRX')
+    
+    try:
+        df_krx = fdr.StockListing('KRX')
+    except Exception as e:
+        print(f"KRX 목록 수집 실패 (기본 KOSPI/KOSDAQ으로 재시도): {e}")
+        try:
+            df_kospi = fdr.StockListing('KOSPI')
+            df_kosdaq = fdr.StockListing('KOSDAQ')
+            df_krx = pd.concat([df_kospi, df_kosdaq], ignore_index=True)
+        except Exception as ex:
+            print(f"종목 목록 수집 불가: {ex}")
+            return
+
     df = df_krx[['Market', 'Code', 'Name']].copy()
     df['Market'] = df['Market'].fillna('KONEX')
 
     # 보통주 및 실제 주식 종목만 선별
     df_filtered = df[
-        (~df['Name'].str.contains('우|ETN|ETF|스팩', na=False)) & 
-        (df['Code'].str.isdigit())
+        (~df['Name'].astype(str).str.contains('우|ETN|ETF|스팩', na=False)) & 
+        (df['Code'].astype(str).str.isdigit())
     ].copy()
 
     results = []
     print(f"2. 총 {len(df_filtered)}개 종목 미너비니 기법 스크리닝 진행...")
 
-    # DataReader용 날짜 설정 (zoneinfo 없는 일반 naive datetime 사용)
+    # DataReader용 날짜 설정
     end_date = datetime.now()
     start_date = end_date - timedelta(days=500)
 
     for _, row in df_filtered.iterrows():
-        symbol_code = row['Code']
+        symbol_code = str(row['Code']).zfill(6)
         market = row['Market']
         name = row['Name']
         
@@ -37,8 +55,9 @@ def run_screener():
         full_symbol = f"{symbol_code}{suffix}"
         
         try:
+            # 개별 종목 데이터 수집 (HTTP 404 발생 시 스킵)
             stock_df = fdr.DataReader(symbol_code, start_date, end_date)
-            if len(stock_df) < 200:
+            if stock_df is None or len(stock_df) < 200:
                 continue
 
             stock_df['MA50'] = stock_df['Close'].rolling(window=50).mean()
@@ -79,6 +98,7 @@ def run_screener():
                     'pct_low': round(pct_from_low, 2)
                 })
         except Exception:
+            # 단일 종목 404 및 수집 실패 시 전체 중단 없이 다음 종목으로 통과
             continue
 
     result_df = pd.DataFrame(results)
