@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-08-10 00:36:28
+// 한국 표준시(KST) 갱신 시각: 2026-08-10 01:41:00
 const KR_DB = [
   { symbol: '134060', name: '이퓨쳐', market: 'KOSDAQ' },
   { symbol: '001540', name: '안국약품', market: 'KOSDAQ' },
