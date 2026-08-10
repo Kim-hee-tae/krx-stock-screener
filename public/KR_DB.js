@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-08-10 07:36:04
+// 한국 표준시(KST) 갱신 시각: 2026-08-10 08:36:05
 const KR_DB = [
   { symbol: '134060', name: '이퓨쳐', market: 'KOSDAQ' },
   { symbol: '001540', name: '안국약품', market: 'KOSDAQ' },
@@ -53,18 +53,18 @@ const KR_DB = [
   { symbol: '003650.KS', name: '미창석유', market: 'KOSPI' },
   { symbol: '137080', name: '나래나노텍', market: 'KOSDAQ' },
   { symbol: '007340.KS', name: 'DN오토모티브', market: 'KOSPI' },
-  { symbol: '189350', name: '코셋', market: 'KONEX' },
   { symbol: '003490.KS', name: '대한항공', market: 'KOSPI' },
   { symbol: '093190', name: '빅솔론', market: 'KOSDAQ' },
   { symbol: '052330', name: '코텍', market: 'KOSDAQ' },
-  { symbol: '161890.KS', name: '한국콜마', market: 'KOSPI' },
   { symbol: '093050.KS', name: 'LF', market: 'KOSPI' },
+  { symbol: '161890.KS', name: '한국콜마', market: 'KOSPI' },
   { symbol: '000810.KS', name: '삼성화재', market: 'KOSPI' },
   { symbol: '144960', name: '뉴파워프라즈마', market: 'KOSDAQ' },
   { symbol: '250030', name: '진코스텍', market: 'KONEX' },
   { symbol: '252990', name: '샘씨엔에스', market: 'KOSDAQ' },
   { symbol: '219130', name: '타이거일렉', market: 'KOSDAQ' },
   { symbol: '002960.KS', name: '한국쉘석유', market: 'KOSPI' },
+  { symbol: '189350', name: '코셋', market: 'KONEX' },
   { symbol: '278470.KS', name: '에이피알', market: 'KOSPI' },
   { symbol: '139130.KS', name: 'iM금융지주', market: 'KOSPI' },
   { symbol: '066830', name: '제노텍', market: 'KONEX' },
