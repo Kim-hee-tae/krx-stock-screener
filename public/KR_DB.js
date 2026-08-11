@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-08-11 07:42:31
+// 한국 표준시(KST) 갱신 시각: 2026-08-11 08:39:32
 const KR_DB = [
   { symbol: '134060', name: '이퓨쳐', market: 'KOSDAQ' },
   { symbol: '017890', name: '한국알콜', market: 'KOSDAQ' },
@@ -76,8 +76,8 @@ const KR_DB = [
   { symbol: '127120', name: '제이에스링크', market: 'KOSDAQ' },
   { symbol: '278470.KS', name: '에이피알', market: 'KOSPI' },
   { symbol: '019540', name: '일지테크', market: 'KOSDAQ' },
-  { symbol: '066830', name: '제노텍', market: 'KONEX' },
   { symbol: '086670', name: '비엠티', market: 'KOSDAQ' },
+  { symbol: '066830', name: '제노텍', market: 'KONEX' },
   { symbol: '275630', name: '에스에스알', market: 'KOSDAQ' },
   { symbol: '005090.KS', name: 'SGC에너지', market: 'KOSPI' },
   { symbol: '010950.KS', name: 'S-Oil', market: 'KOSPI' },
