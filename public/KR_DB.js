@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-08-11 16:16:58
+// 한국 표준시(KST) 갱신 시각: 2026-08-11 18:03:32
 const KR_DB = [
   { symbol: '093320', name: '케이아이엔엑스', market: 'KOSDAQ' },
   { symbol: '025890.KS', name: '한국주강', market: 'KOSPI' },
