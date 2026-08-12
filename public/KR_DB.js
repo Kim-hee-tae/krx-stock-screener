@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-08-13 05:51:54
+// 한국 표준시(KST) 갱신 시각: 2026-08-13 06:51:53
 const KR_DB = [
   { symbol: '025890.KS', name: '한국주강', market: 'KOSPI' },
   { symbol: '013700.KS', name: '까뮤이앤씨', market: 'KOSPI' },
