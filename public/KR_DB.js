@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-08-19 05:29:33
+// 한국 표준시(KST) 갱신 시각: 2026-08-19 06:28:35
 const KR_DB = [
   { symbol: '092230.KS', name: 'KPX홀딩스', market: 'KOSPI' },
   { symbol: '134060', name: '이퓨쳐', market: 'KOSDAQ' },
