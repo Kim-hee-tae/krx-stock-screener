@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-08-21 03:46:09
+// 한국 표준시(KST) 갱신 시각: 2026-08-21 04:34:59
 const KR_DB = [
   { symbol: '241710', name: '코스메카코리아', market: 'KOSDAQ GLOBAL' },
   { symbol: '417310.KS', name: '코람코더원리츠', market: 'KOSPI' },
