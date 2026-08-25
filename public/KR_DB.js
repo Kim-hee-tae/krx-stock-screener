@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-08-25 15:55:42
+// 한국 표준시(KST) 갱신 시각: 2026-08-25 16:49:20
 const KR_DB = [
   { symbol: '192820.KS', name: '코스맥스', market: 'KOSPI' },
   { symbol: '036800', name: '나이스정보통신', market: 'KOSDAQ' },
@@ -80,8 +80,8 @@ const KR_DB = [
   { symbol: '086060', name: '진바이오텍', market: 'KOSDAQ' },
   { symbol: '085620.KS', name: '미래에셋생명', market: 'KOSPI' },
   { symbol: '006360.KS', name: 'GS건설', market: 'KOSPI' },
-  { symbol: '051160', name: '지어소프트', market: 'KOSDAQ' },
   { symbol: '189330', name: '씨이랩', market: 'KOSDAQ' },
+  { symbol: '051160', name: '지어소프트', market: 'KOSDAQ' },
   { symbol: '900260', name: '로스웰', market: 'KOSDAQ' },
   { symbol: '011560', name: '세보엠이씨', market: 'KOSDAQ' },
   { symbol: '009460.KS', name: '한창제지', market: 'KOSPI' },
