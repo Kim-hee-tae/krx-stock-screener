@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-08-25 17:49:38
+// 한국 표준시(KST) 갱신 시각: 2026-08-25 19:37:34
 const KR_DB = [
   { symbol: '192820.KS', name: '코스맥스', market: 'KOSPI' },
   { symbol: '036800', name: '나이스정보통신', market: 'KOSDAQ' },
