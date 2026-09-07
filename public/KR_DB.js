@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-09-08 04:44:05
+// 한국 표준시(KST) 갱신 시각: 2026-09-08 07:40:17
 const KR_DB = [
   { symbol: '053160', name: '프리엠스', market: 'KOSDAQ' },
   { symbol: '417310.KS', name: '코람코더원리츠', market: 'KOSPI' },
