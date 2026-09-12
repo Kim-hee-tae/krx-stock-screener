@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-09-12 12:58:22
+// 한국 표준시(KST) 갱신 시각: 2026-09-12 17:34:58
 const KR_DB = [
   { symbol: '417310.KS', name: '코람코더원리츠', market: 'KOSPI' },
   { symbol: '098120', name: '마이크로컨텍솔', market: 'KOSDAQ' },
