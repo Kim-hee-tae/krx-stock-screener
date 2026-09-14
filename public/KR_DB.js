@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-09-15 01:53:16
+// 한국 표준시(KST) 갱신 시각: 2026-09-15 05:49:06
 const KR_DB = [
   { symbol: '071200', name: '인피니트헬스케어', market: 'KOSDAQ' },
   { symbol: '417310.KS', name: '코람코더원리츠', market: 'KOSPI' },
