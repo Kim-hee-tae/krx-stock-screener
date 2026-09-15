@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-09-15 05:49:06
+// 한국 표준시(KST) 갱신 시각: 2026-09-15 08:45:46
 const KR_DB = [
   { symbol: '071200', name: '인피니트헬스케어', market: 'KOSDAQ' },
   { symbol: '417310.KS', name: '코람코더원리츠', market: 'KOSPI' },
@@ -91,8 +91,8 @@ const KR_DB = [
   { symbol: '073240.KS', name: '금호타이어', market: 'KOSPI' },
   { symbol: '004770.KS', name: '써니전자', market: 'KOSPI' },
   { symbol: '044820.KS', name: '코스맥스비티아이', market: 'KOSPI' },
-  { symbol: '067290', name: 'JW신약', market: 'KOSDAQ' },
   { symbol: '439090', name: '마녀공장', market: 'KOSDAQ' },
+  { symbol: '067290', name: 'JW신약', market: 'KOSDAQ' },
   { symbol: '180640.KS', name: '한진칼', market: 'KOSPI' },
   { symbol: '024800', name: '유성티엔에스', market: 'KOSDAQ' },
   { symbol: '086670', name: '비엠티', market: 'KOSDAQ' },
