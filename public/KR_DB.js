@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-09-17 03:01:59
+// 한국 표준시(KST) 갱신 시각: 2026-09-17 06:58:29
 const KR_DB = [
   { symbol: '021240.KS', name: '코웨이', market: 'KOSPI' },
   { symbol: '417310.KS', name: '코람코더원리츠', market: 'KOSPI' },
