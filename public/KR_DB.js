@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-09-22 01:54:34
+// 한국 표준시(KST) 갱신 시각: 2026-09-22 05:54:25
 const KR_DB = [
   { symbol: '252990', name: '샘씨엔에스', market: 'KOSDAQ' },
   { symbol: '029460.KS', name: '케이씨', market: 'KOSPI' },
