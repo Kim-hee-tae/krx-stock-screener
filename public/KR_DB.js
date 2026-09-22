@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-09-22 05:54:25
+// 한국 표준시(KST) 갱신 시각: 2026-09-22 08:57:22
 const KR_DB = [
   { symbol: '252990', name: '샘씨엔에스', market: 'KOSDAQ' },
   { symbol: '029460.KS', name: '케이씨', market: 'KOSPI' },
@@ -91,8 +91,8 @@ const KR_DB = [
   { symbol: '950190', name: '고스트스튜디오', market: 'KOSDAQ' },
   { symbol: '222800', name: '심텍', market: 'KOSDAQ GLOBAL' },
   { symbol: '457600', name: '벡트', market: 'KOSDAQ' },
-  { symbol: '276240', name: '엘리비젼', market: 'KONEX' },
   { symbol: '194370.KS', name: '제이에스코퍼레이션', market: 'KOSPI' },
+  { symbol: '276240', name: '엘리비젼', market: 'KONEX' },
   { symbol: '180640.KS', name: '한진칼', market: 'KOSPI' },
   { symbol: '053260', name: '금강철강', market: 'KOSDAQ' },
   { symbol: '049550', name: '잉크테크', market: 'KOSDAQ' },
