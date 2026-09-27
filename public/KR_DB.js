@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-09-28 03:10:41
+// 한국 표준시(KST) 갱신 시각: 2026-09-28 06:56:37
 const KR_DB = [
   { symbol: '017650', name: '대림제지', market: 'KOSDAQ' },
   { symbol: '003490.KS', name: '대한항공', market: 'KOSPI' },
