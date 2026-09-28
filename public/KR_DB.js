@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-09-29 00:10:03
+// 한국 표준시(KST) 갱신 시각: 2026-09-29 06:43:48
 const KR_DB = [
   { symbol: '051160', name: '지어소프트', market: 'KOSDAQ' },
   { symbol: '017650', name: '대림제지', market: 'KOSDAQ' },
