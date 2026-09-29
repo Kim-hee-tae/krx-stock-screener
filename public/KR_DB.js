@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-09-30 00:33:32
+// 한국 표준시(KST) 갱신 시각: 2026-09-30 05:34:48
 const KR_DB = [
   { symbol: '031980', name: '피에스케이홀딩스', market: 'KOSDAQ' },
   { symbol: '250030', name: '진코스텍', market: 'KONEX' },
