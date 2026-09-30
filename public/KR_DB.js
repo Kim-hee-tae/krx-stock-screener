@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-09-30 22:28:51
+// 한국 표준시(KST) 갱신 시각: 2026-10-01 03:58:39
 const KR_DB = [
   { symbol: '096530', name: '씨젠', market: 'KOSDAQ GLOBAL' },
   { symbol: '003490.KS', name: '대한항공', market: 'KOSPI' },
