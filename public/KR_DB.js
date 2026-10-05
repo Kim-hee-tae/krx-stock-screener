@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-10-05 15:41:59
+// 한국 표준시(KST) 갱신 시각: 2026-10-06 00:44:02
 const KR_DB = [
   { symbol: '222800', name: '심텍', market: 'KOSDAQ GLOBAL' },
   { symbol: '031980', name: '피에스케이홀딩스', market: 'KOSDAQ' },
