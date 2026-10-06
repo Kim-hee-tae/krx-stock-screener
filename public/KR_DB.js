@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-10-07 01:38:58
+// 한국 표준시(KST) 갱신 시각: 2026-10-07 06:30:20
 const KR_DB = [
   { symbol: '036930', name: '주성엔지니어링', market: 'KOSDAQ GLOBAL' },
   { symbol: '033560', name: '블루콤', market: 'KOSDAQ' },
