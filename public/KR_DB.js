@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-10-09 17:43:42
+// 한국 표준시(KST) 갱신 시각: 2026-10-10 00:58:57
 const KR_DB = [
   { symbol: '065690', name: '파커스', market: 'KOSDAQ' },
   { symbol: '051160', name: '지어소프트', market: 'KOSDAQ' },
