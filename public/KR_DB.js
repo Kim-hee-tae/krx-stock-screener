@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-10-17 17:24:38
+// 한국 표준시(KST) 갱신 시각: 2026-10-17 21:49:02
 const KR_DB = [
   { symbol: '496320', name: '본시스템즈', market: 'KONEX' },
   { symbol: '059100', name: '아이컴포넌트', market: 'KOSDAQ' },
