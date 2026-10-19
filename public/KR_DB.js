@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-10-19 23:28:52
+// 한국 표준시(KST) 갱신 시각: 2026-10-20 05:27:25
 const KR_DB = [
   { symbol: '496320', name: '본시스템즈', market: 'KONEX' },
   { symbol: '453340.KS', name: '현대그린푸드', market: 'KOSPI' },
