@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-10-22 04:13:39
+// 한국 표준시(KST) 갱신 시각: 2026-10-22 08:07:04
 const KR_DB = [
   { symbol: '496320', name: '본시스템즈', market: 'KONEX' },
   { symbol: '033780.KS', name: 'KT&G', market: 'KOSPI' },
@@ -8,8 +8,8 @@ const KR_DB = [
   { symbol: '065690', name: '파커스', market: 'KOSDAQ' },
   { symbol: '417310.KS', name: '코람코더원리츠', market: 'KOSPI' },
   { symbol: '033560', name: '블루콤', market: 'KOSDAQ' },
-  { symbol: '017650', name: '대림제지', market: 'KOSDAQ' },
   { symbol: '077500.KS', name: '유니퀘스트', market: 'KOSPI' },
+  { symbol: '017650', name: '대림제지', market: 'KOSDAQ' },
   { symbol: '004780', name: '대륙제관', market: 'KOSDAQ' },
   { symbol: '021240.KS', name: '코웨이', market: 'KOSPI' },
   { symbol: '453340.KS', name: '현대그린푸드', market: 'KOSPI' },
@@ -30,8 +30,8 @@ const KR_DB = [
   { symbol: '064290', name: '인텍플러스', market: 'KOSDAQ' },
   { symbol: '446440', name: '에피바이오텍', market: 'KONEX' },
   { symbol: '311060', name: '엘에이티', market: 'KONEX' },
-  { symbol: '049430', name: '코메론', market: 'KOSDAQ' },
   { symbol: '018670.KS', name: 'SK가스', market: 'KOSPI' },
+  { symbol: '049430', name: '코메론', market: 'KOSDAQ' },
   { symbol: '900260', name: '로스웰', market: 'KOSDAQ' },
   { symbol: '096530', name: '씨젠', market: 'KOSDAQ GLOBAL' },
   { symbol: '219130', name: '타이거일렉', market: 'KOSDAQ' },
@@ -40,8 +40,8 @@ const KR_DB = [
   { symbol: '041520', name: '이엘씨', market: 'KOSDAQ' },
   { symbol: '036800', name: '나이스정보통신', market: 'KOSDAQ' },
   { symbol: '002960.KS', name: '한국쉘석유', market: 'KOSPI' },
-  { symbol: '005160', name: '동국산업', market: 'KOSDAQ' },
   { symbol: '052460', name: '아이크래프트', market: 'KOSDAQ' },
+  { symbol: '005160', name: '동국산업', market: 'KOSDAQ' },
   { symbol: '355690', name: '에이텀', market: 'KOSDAQ' },
   { symbol: '052860', name: '아이앤씨', market: 'KOSDAQ' },
   { symbol: '351320', name: '넥사다이내믹스', market: 'KOSDAQ' },
@@ -53,6 +53,7 @@ const KR_DB = [
   { symbol: '051360', name: '토비스', market: 'KOSDAQ' },
   { symbol: '121890', name: '에스디시스템', market: 'KOSDAQ' },
   { symbol: '017250', name: '인터엠', market: 'KOSDAQ' },
+  { symbol: '099520', name: 'DGI', market: 'KOSDAQ' },
   { symbol: '141000', name: '비아트론', market: 'KOSDAQ' },
   { symbol: '159010', name: '아스플로', market: 'KOSDAQ' },
   { symbol: '192820.KS', name: '코스맥스', market: 'KOSPI' },
