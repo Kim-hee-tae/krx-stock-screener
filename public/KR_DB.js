@@ -1,15 +1,15 @@
-// 한국 표준시(KST) 갱신 시각: 2026-10-28 04:56:56
+// 한국 표준시(KST) 갱신 시각: 2026-10-28 08:41:35
 const KR_DB = [
   { symbol: '496320', name: '본시스템즈', market: 'KONEX' },
   { symbol: '446440', name: '에피바이오텍', market: 'KONEX' },
   { symbol: '144960', name: '뉴파워프라즈마', market: 'KOSDAQ' },
   { symbol: '065690', name: '파커스', market: 'KOSDAQ' },
   { symbol: '425420', name: '티에프이', market: 'KOSDAQ' },
+  { symbol: '137080', name: '나래나노텍', market: 'KOSDAQ' },
   { symbol: '092870', name: '엑시콘', market: 'KOSDAQ' },
   { symbol: '148930', name: '에이치와이티씨', market: 'KOSDAQ' },
   { symbol: '219130', name: '타이거일렉', market: 'KOSDAQ' },
   { symbol: '417310.KS', name: '코람코더원리츠', market: 'KOSPI' },
-  { symbol: '137080', name: '나래나노텍', market: 'KOSDAQ' },
   { symbol: '033780.KS', name: 'KT&G', market: 'KOSPI' },
   { symbol: '228850', name: '레이언스', market: 'KOSDAQ' },
   { symbol: '351320', name: '넥사다이내믹스', market: 'KOSDAQ' },
@@ -35,9 +35,9 @@ const KR_DB = [
   { symbol: '059100', name: '아이컴포넌트', market: 'KOSDAQ' },
   { symbol: '078350', name: '한양디지텍', market: 'KOSDAQ' },
   { symbol: '121440', name: '골프존홀딩스', market: 'KOSDAQ' },
+  { symbol: '086060', name: '진바이오텍', market: 'KOSDAQ' },
   { symbol: '055490.KS', name: '테이팩스', market: 'KOSPI' },
   { symbol: '003350.KS', name: '한국화장품제조', market: 'KOSPI' },
-  { symbol: '086060', name: '진바이오텍', market: 'KOSDAQ' },
   { symbol: '236200', name: '슈프리마', market: 'KOSDAQ' },
   { symbol: '091580', name: '상신이디피', market: 'KOSDAQ' },
   { symbol: '159010', name: '아스플로', market: 'KOSDAQ' },
