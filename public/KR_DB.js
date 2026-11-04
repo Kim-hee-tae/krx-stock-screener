@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-11-04 03:18:24
+// 한국 표준시(KST) 갱신 시각: 2026-11-04 08:54:19
 const KR_DB = [
   { symbol: '496320', name: '본시스템즈', market: 'KONEX' },
   { symbol: '089860.KS', name: '롯데렌탈', market: 'KOSPI' },
@@ -26,12 +26,12 @@ const KR_DB = [
   { symbol: '092730', name: '네오팜', market: 'KOSDAQ' },
   { symbol: '003490.KS', name: '대한항공', market: 'KOSPI' },
   { symbol: '077500.KS', name: '유니퀘스트', market: 'KOSPI' },
+  { symbol: '091340', name: 'S&K글로벌', market: 'KOSDAQ' },
   { symbol: '159010', name: '아스플로', market: 'KOSDAQ' },
   { symbol: '012030.KS', name: 'DB', market: 'KOSPI' },
   { symbol: '138040.KS', name: '메리츠금융지주', market: 'KOSPI' },
   { symbol: '900260', name: '로스웰', market: 'KOSDAQ' },
   { symbol: '005430.KS', name: '한국공항', market: 'KOSPI' },
-  { symbol: '091340', name: 'S&K글로벌', market: 'KOSDAQ' },
   { symbol: '000810.KS', name: '삼성화재', market: 'KOSPI' },
   { symbol: '425420', name: '티에프이', market: 'KOSDAQ' },
   { symbol: '276240', name: '엘리비젼', market: 'KONEX' },
