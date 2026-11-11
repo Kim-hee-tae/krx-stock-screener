@@ -1,4 +1,6 @@
 import os
+import json
+import math
 import pandas as pd
 import numpy as np
 import FinanceDataReader as fdr
@@ -10,6 +12,64 @@ from zoneinfo import ZoneInfo
 opener = urllib.request.build_opener()
 opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')]
 urllib.request.install_opener(opener)
+
+MIN_SCANNED = 500  # 이보다 적게 검사됐으면 가격 서버 장애로 보고 기존 결과를 덮어쓰지 않는다
+
+
+def is_common_stock(code, name):
+    """보통주만 남긴다. 우선주는 이름이 아니라 종목코드 끝자리로 거른다 (보통주는 0으로 끝남).
+    이름에 '우'가 들어갔다고 빼면 우리금융지주·대우건설 같은 보통주까지 빠진다."""
+    code = str(code)
+    if not (code.isdigit() and len(code) == 6 and code.endswith('0')):
+        return False
+    return not any(k in str(name) for k in ('ETN', 'ETF', '스팩'))
+
+
+def symbol_of(code, market):
+    market = str(market)
+    if market == 'KOSPI':
+        return f"{code}.KS"
+    if market.startswith('KOSDAQ'):   # KOSDAQ, KOSDAQ GLOBAL
+        return f"{code}.KQ"
+    return code
+
+
+def check_trend(stock_df):
+    """미너비니 트렌드 템플릿 7가지 조건. 통과하면 값 dict, 아니면 None."""
+    if stock_df is None or len(stock_df) < 200:
+        return None
+    close = stock_df['Close']
+    ma50 = close.rolling(window=50).mean().iloc[-1]
+    ma150 = close.rolling(window=150).mean().iloc[-1]
+    ma200_s = close.rolling(window=200).mean()
+    ma200 = ma200_s.iloc[-1]
+    ma200_1m_ago = ma200_s.iloc[-20] if len(stock_df) >= 220 else ma200_s.dropna().iloc[0]
+    curr_price = close.iloc[-1]
+
+    df_52w = stock_df.iloc[-250:] if len(stock_df) >= 250 else stock_df
+    high_52w = df_52w['High'].max()
+    low_52w = df_52w['Low'].min()
+
+    # 가격 자료가 깨진 종목(저가 0, 빈 값 등)은 건너뛴다 → +inf% 방지
+    values = [curr_price, ma50, ma150, ma200, ma200_1m_ago, high_52w, low_52w]
+    if any((v is None) or (not math.isfinite(float(v))) or float(v) <= 0 for v in values):
+        return None
+
+    c1 = (curr_price > ma150) and (curr_price > ma200)
+    c2 = ma150 > ma200
+    c3 = ma200 > ma200_1m_ago
+    c4 = (ma50 > ma150) and (ma50 > ma200)
+    c5 = curr_price > ma50
+    c6 = curr_price >= (low_52w * 1.25)
+    c7 = curr_price >= (high_52w * 0.75)
+    if not (c1 and c2 and c3 and c4 and c5 and c6 and c7):
+        return None
+    return {
+        'price': int(curr_price),
+        'pct_high': round((curr_price - high_52w) / high_52w * 100, 2),
+        'pct_low': round((curr_price - low_52w) / low_52w * 100, 2),
+    }
+
 
 def run_screener():
     # 1. 한국 표준시(KST) 기준 현재 시간 구하기
@@ -33,14 +93,12 @@ def run_screener():
     df = df_krx[['Market', 'Code', 'Name']].copy()
     df['Market'] = df['Market'].fillna('KONEX')
 
-    # 보통주 및 실제 주식 종목만 선별
-    df_filtered = df[
-        (~df['Name'].astype(str).str.contains('우|ETN|ETF|스팩', na=False)) & 
-        (df['Code'].astype(str).str.isdigit())
-    ].copy()
+    # 보통주만 (우선주·ETF·ETN·스팩 제외)
+    df_filtered = df[[is_common_stock(c, n) for c, n in zip(df['Code'], df['Name'])]].copy()
 
     results = []
-    print(f"2. 총 {len(df_filtered)}개 종목 미너비니 기법 스크리닝 진행...")
+    scanned = 0
+    print(f"2. 총 {len(df_filtered)}개 종목 미너비니 트렌드 템플릿(7가지 조건) 스크리닝 진행...")
 
     # DataReader용 날짜 설정
     end_date = datetime.now()
@@ -51,55 +109,26 @@ def run_screener():
         market = row['Market']
         name = row['Name']
         
-        suffix = ".KS" if market == 'KOSPI' else (".KQ" if market == 'KOSDAK' else "")
-        full_symbol = f"{symbol_code}{suffix}"
-        
+        full_symbol = symbol_of(symbol_code, market)
+
         try:
             # 개별 종목 데이터 수집 (HTTP 404 발생 시 스킵)
             stock_df = fdr.DataReader(symbol_code, start_date, end_date)
             if stock_df is None or len(stock_df) < 200:
                 continue
-
-            stock_df['MA50'] = stock_df['Close'].rolling(window=50).mean()
-            stock_df['MA150'] = stock_df['Close'].rolling(window=150).mean()
-            stock_df['MA200'] = stock_df['Close'].rolling(window=200).mean()
-
-            curr_price = stock_df['Close'].iloc[-1]
-            ma50 = stock_df['MA50'].iloc[-1]
-            ma150 = stock_df['MA150'].iloc[-1]
-            ma200 = stock_df['MA200'].iloc[-1]
-            ma200_1m_ago = stock_df['MA200'].iloc[-20] if len(stock_df) >= 220 else stock_df['MA200'].iloc[0]
-
-            df_52w = stock_df.iloc[-250:] if len(stock_df) >= 250 else stock_df
-            high_52w = df_52w['High'].max()
-            low_52w = df_52w['Low'].min()
-
-            # 미너비니 8대 조건
-            c1 = (curr_price > ma150) and (curr_price > ma200)
-            c2 = ma150 > ma200
-            c3 = ma200 > ma200_1m_ago
-            c4 = (ma50 > ma150) and (ma50 > ma200)
-            c5 = curr_price > ma50
-            c6 = curr_price >= (low_52w * 1.25)
-            c7 = curr_price >= (high_52w * 0.75)
-
-            if c1 and c2 and c3 and c4 and c5 and c6 and c7:
-                pct_from_high = ((curr_price - high_52w) / high_52w) * 100
-                pct_from_low = ((curr_price - low_52w) / low_52w) * 100
+            scanned += 1
+            hit = check_trend(stock_df)
+            if hit:
                 clean_name = str(name).replace("\\", "\\\\").replace("'", "\\'")
-                
-                results.append({
-                    'symbol': full_symbol,
-                    'code': symbol_code,
-                    'name': clean_name,
-                    'market': market,
-                    'price': int(curr_price),
-                    'pct_high': round(pct_from_high, 2),
-                    'pct_low': round(pct_from_low, 2)
-                })
+                results.append({'symbol': full_symbol, 'code': symbol_code, 'name': clean_name, 'raw_name': str(name), 'market': market, **hit})
         except Exception:
             # 단일 종목 404 및 수집 실패 시 전체 중단 없이 다음 종목으로 통과
             continue
+
+    print(f"3. 검사 완료: {scanned}개 중 {len(results)}개 통과")
+    if scanned < MIN_SCANNED:
+        print(f"검사된 종목이 {scanned}개뿐입니다 (가격 서버 장애로 판단). 기존 결과를 그대로 둡니다.")
+        return
 
     result_df = pd.DataFrame(results)
     
@@ -108,6 +137,22 @@ def run_screener():
 
     if not result_df.empty:
         result_df = result_df.sort_values(by='pct_high', ascending=False).reset_index(drop=True)
+
+    # 0) screener.json — 다른 사이트(yplue.com)가 읽어 가는 결과 파일. 통과 종목이 0개여도 쓴다.
+    with open('public/screener.json', 'w', encoding='utf-8') as f:
+        json.dump({
+            'version': 2,
+            'updatedAt': now_str,          # 한국 시각
+            'scanned': scanned,            # 가격을 받아 검사한 종목 수
+            'count': len(result_df),
+            'items': [
+                {'code': r['code'], 'symbol': r['symbol'], 'name': r['raw_name'], 'market': r['market'],
+                 'price': int(r['price']), 'pctHigh': float(r['pct_high']), 'pctLow': float(r['pct_low'])}
+                for _, r in result_df.iterrows()
+            ],
+        }, f, ensure_ascii=False, indent=1)
+
+    if not result_df.empty:
 
         # 1) KR_DB.js 내보내기
         with open('public/KR_DB.js', 'w', encoding='utf-8') as f:
