@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-11-14 11:05:47
+// 한국 표준시(KST) 갱신 시각: 2026-11-14 18:57:49
 const KR_DB = [
   { symbol: '116100', name: '태양기계', market: 'KONEX' },
   { symbol: '089860.KS', name: '롯데렌탈', market: 'KOSPI' },
