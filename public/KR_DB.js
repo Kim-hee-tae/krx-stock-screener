@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-11-19 21:39:55
+// 한국 표준시(KST) 갱신 시각: 2026-11-20 06:15:12
 const KR_DB = [
   { symbol: '453340.KS', name: '현대그린푸드', market: 'KOSPI' },
   { symbol: '089860.KS', name: '롯데렌탈', market: 'KOSPI' },
