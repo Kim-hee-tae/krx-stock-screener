@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-11-25 21:22:58
+// 한국 표준시(KST) 갱신 시각: 2026-11-26 07:15:23
 const KR_DB = [
   { symbol: '053800.KQ', name: '안랩', market: 'KOSDAQ' },
   { symbol: '150900.KQ', name: '파수AI', market: 'KOSDAQ' },
