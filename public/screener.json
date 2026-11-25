@@ -1,35 +1,35 @@
 {
  "version": 2,
- "updatedAt": "2026-11-25 11:04:54",
+ "updatedAt": "2026-11-25 21:22:58",
  "scanned": 2626,
- "count": 49,
+ "count": 51,
  "items": [
+  {
+   "code": "053800",
+   "symbol": "053800.KQ",
+   "name": "안랩",
+   "market": "KOSDAQ",
+   "price": 157900,
+   "pctHigh": 0.0,
+   "pctLow": 210.83
+  },
+  {
+   "code": "150900",
+   "symbol": "150900.KQ",
+   "name": "파수AI",
+   "market": "KOSDAQ",
+   "price": 7550,
+   "pctHigh": 0.0,
+   "pctLow": 177.06
+  },
   {
    "code": "089860",
    "symbol": "089860.KS",
    "name": "롯데렌탈",
    "market": "KOSPI",
-   "price": 58700,
-   "pctHigh": 0.0,
-   "pctLow": 120.26
-  },
-  {
-   "code": "116100",
-   "symbol": "116100",
-   "name": "태양기계",
-   "market": "KONEX",
-   "price": 930,
-   "pctHigh": 0.0,
-   "pctLow": 105.3
-  },
-  {
-   "code": "192820",
-   "symbol": "192820.KS",
-   "name": "코스맥스",
-   "market": "KOSPI",
-   "price": 321500,
-   "pctHigh": -0.31,
-   "pctLow": 128.01
+   "price": 58600,
+   "pctHigh": -0.17,
+   "pctLow": 119.89
   },
   {
    "code": "067010",
@@ -41,157 +41,148 @@
    "pctLow": 55.16
   },
   {
-   "code": "197140",
-   "symbol": "197140.KQ",
-   "name": "디지캡",
-   "market": "KOSDAQ",
-   "price": 2730,
-   "pctHigh": -0.73,
-   "pctLow": 75.79
+   "code": "192820",
+   "symbol": "192820.KS",
+   "name": "코스맥스",
+   "market": "KOSPI",
+   "price": 329500,
+   "pctHigh": -1.05,
+   "pctLow": 133.69
   },
   {
    "code": "065690",
    "symbol": "065690.KQ",
    "name": "파커스",
    "market": "KOSDAQ",
-   "price": 1969,
-   "pctHigh": -0.91,
-   "pctLow": 182.9
+   "price": 1966,
+   "pctHigh": -1.06,
+   "pctLow": 182.47
   },
   {
    "code": "180640",
    "symbol": "180640.KS",
    "name": "한진칼",
    "market": "KOSPI",
-   "price": 241500,
-   "pctHigh": -2.03,
-   "pctLow": 159.4
+   "price": 245000,
+   "pctHigh": -1.61,
+   "pctLow": 163.16
   },
   {
    "code": "251970",
    "symbol": "251970.KQ",
    "name": "펌텍코리아",
    "market": "KOSDAQ GLOBAL",
-   "price": 79200,
-   "pctHigh": -2.7,
-   "pctLow": 152.23
-  },
-  {
-   "code": "051160",
-   "symbol": "051160.KQ",
-   "name": "지어소프트",
-   "market": "KOSDAQ",
-   "price": 15360,
-   "pctHigh": -3.4,
-   "pctLow": 144.98
-  },
-  {
-   "code": "093320",
-   "symbol": "093320.KQ",
-   "name": "케이아이엔엑스",
-   "market": "KOSDAQ",
-   "price": 172100,
-   "pctHigh": -4.55,
-   "pctLow": 115.13
-  },
-  {
-   "code": "003490",
-   "symbol": "003490.KS",
-   "name": "대한항공",
-   "market": "KOSPI",
-   "price": 31400,
-   "pctHigh": -4.7,
-   "pctLow": 49.52
-  },
-  {
-   "code": "453340",
-   "symbol": "453340.KS",
-   "name": "현대그린푸드",
-   "market": "KOSPI",
-   "price": 20450,
-   "pctHigh": -4.88,
-   "pctLow": 39.59
-  },
-  {
-   "code": "053800",
-   "symbol": "053800.KQ",
-   "name": "안랩",
-   "market": "KOSDAQ",
-   "price": 140200,
-   "pctHigh": -4.95,
-   "pctLow": 175.98
-  },
-  {
-   "code": "150900",
-   "symbol": "150900.KQ",
-   "name": "파수AI",
-   "market": "KOSDAQ",
-   "price": 7140,
-   "pctHigh": -5.43,
-   "pctLow": 162.02
+   "price": 79700,
+   "pctHigh": -2.09,
+   "pctLow": 153.82
   },
   {
    "code": "130580",
    "symbol": "130580.KQ",
    "name": "나이스디앤비",
    "market": "KOSDAQ",
-   "price": 7070,
-   "pctHigh": -5.48,
-   "pctLow": 35.96
+   "price": 7230,
+   "pctHigh": -3.34,
+   "pctLow": 39.04
+  },
+  {
+   "code": "051160",
+   "symbol": "051160.KQ",
+   "name": "지어소프트",
+   "market": "KOSDAQ",
+   "price": 15280,
+   "pctHigh": -3.9,
+   "pctLow": 143.7
+  },
+  {
+   "code": "197140",
+   "symbol": "197140.KQ",
+   "name": "디지캡",
+   "market": "KOSDAQ",
+   "price": 2605,
+   "pctHigh": -5.27,
+   "pctLow": 67.74
+  },
+  {
+   "code": "093320",
+   "symbol": "093320.KQ",
+   "name": "케이아이엔엑스",
+   "market": "KOSDAQ",
+   "price": 170600,
+   "pctHigh": -5.38,
+   "pctLow": 113.25
+  },
+  {
+   "code": "003490",
+   "symbol": "003490.KS",
+   "name": "대한항공",
+   "market": "KOSPI",
+   "price": 31100,
+   "pctHigh": -5.61,
+   "pctLow": 48.1
+  },
+  {
+   "code": "116100",
+   "symbol": "116100",
+   "name": "태양기계",
+   "market": "KONEX",
+   "price": 875,
+   "pctHigh": -5.91,
+   "pctLow": 93.16
+  },
+  {
+   "code": "453340",
+   "symbol": "453340.KS",
+   "name": "현대그린푸드",
+   "market": "KOSPI",
+   "price": 20100,
+   "pctHigh": -6.51,
+   "pctLow": 37.2
   },
   {
    "code": "020560",
    "symbol": "020560.KS",
    "name": "아시아나항공",
    "market": "KOSPI",
-   "price": 8470,
-   "pctHigh": -5.78,
-   "pctLow": 30.31
+   "price": 8370,
+   "pctHigh": -6.9,
+   "pctLow": 28.77
   },
   {
    "code": "079940",
    "symbol": "079940.KQ",
    "name": "가비아",
    "market": "KOSDAQ",
-   "price": 48400,
-   "pctHigh": -6.92,
-   "pctLow": 94.38
+   "price": 47900,
+   "pctHigh": -7.88,
+   "pctLow": 92.37
   },
   {
-   "code": "290550",
-   "symbol": "290550.KQ",
-   "name": "디케이티",
+   "code": "263860",
+   "symbol": "263860.KQ",
+   "name": "지니언스",
    "market": "KOSDAQ",
-   "price": 32850,
-   "pctHigh": -8.11,
-   "pctLow": 393.24
-  },
-  {
-   "code": "348030",
-   "symbol": "348030.KQ",
-   "name": "모비릭스",
-   "market": "KOSDAQ",
-   "price": 4485,
-   "pctHigh": -8.38,
-   "pctLow": 113.57
+   "price": 41750,
+   "pctHigh": -8.04,
+   "pctLow": 279.55
   },
   {
    "code": "033780",
    "symbol": "033780.KS",
    "name": "KT&G",
    "market": "KOSPI",
-   "price": 183200,
-   "pctHigh": -8.86,
-   "pctLow": 31.8
+   "price": 184200,
+   "pctHigh": -8.36,
+   "pctLow": 32.52
   },
   {
    "code": "005430",
    "symbol": "005430.KS",
    "name": "한국공항",
    "market": "KOSPI",
-   "price": 102800,
-   "pctHigh": -8.95,
-   "pctLow": 89.67
+   "price": 103300,
+   "pctHigh": -8.5,
+   "pctLow": 90.59
   },
   {
    "code": "189350",
@@ -203,85 +194,103 @@
    "pctLow": 85.17
   },
   {
+   "code": "282330",
+   "symbol": "282330.KS",
+   "name": "BGF리테일",
+   "market": "KOSPI",
+   "price": 141900,
+   "pctHigh": -9.39,
+   "pctLow": 40.22
+  },
+  {
    "code": "001940",
    "symbol": "001940.KS",
    "name": "KISCO홀딩스",
    "market": "KOSPI",
-   "price": 26800,
-   "pctHigh": -9.61,
-   "pctLow": 33.0
+   "price": 26750,
+   "pctHigh": -9.78,
+   "pctLow": 32.75
   },
   {
    "code": "035610",
    "symbol": "035610.KQ",
    "name": "솔본",
    "market": "KOSDAQ",
-   "price": 5060,
-   "pctHigh": -9.64,
-   "pctLow": 60.38
+   "price": 5040,
+   "pctHigh": -10.0,
+   "pctLow": 59.75
   },
   {
-   "code": "282330",
-   "symbol": "282330.KS",
-   "name": "BGF리테일",
-   "market": "KOSPI",
-   "price": 139500,
-   "pctHigh": -10.92,
-   "pctLow": 37.85
-  },
-  {
-   "code": "092730",
-   "symbol": "092730.KQ",
-   "name": "네오팜",
+   "code": "348030",
+   "symbol": "348030.KQ",
+   "name": "모비릭스",
    "market": "KOSDAQ",
-   "price": 23150,
-   "pctHigh": -10.96,
-   "pctLow": 48.49
-  },
-  {
-   "code": "012030",
-   "symbol": "012030.KS",
-   "name": "DB",
-   "market": "KOSPI",
-   "price": 2345,
-   "pctHigh": -11.17,
-   "pctLow": 86.56
+   "price": 4385,
+   "pctHigh": -10.42,
+   "pctLow": 108.81
   },
   {
    "code": "104700",
    "symbol": "104700.KS",
    "name": "한국철강",
    "market": "KOSPI",
-   "price": 11450,
-   "pctHigh": -11.92,
-   "pctLow": 50.46
+   "price": 11640,
+   "pctHigh": -10.46,
+   "pctLow": 52.96
+  },
+  {
+   "code": "290550",
+   "symbol": "290550.KQ",
+   "name": "디케이티",
+   "market": "KOSDAQ",
+   "price": 31700,
+   "pctHigh": -11.33,
+   "pctLow": 375.98
+  },
+  {
+   "code": "092730",
+   "symbol": "092730.KQ",
+   "name": "네오팜",
+   "market": "KOSDAQ",
+   "price": 23050,
+   "pctHigh": -11.35,
+   "pctLow": 47.85
   },
   {
    "code": "044820",
    "symbol": "044820.KS",
    "name": "코스맥스비티아이",
    "market": "KOSPI",
-   "price": 25400,
-   "pctHigh": -12.86,
-   "pctLow": 115.07
-  },
-  {
-   "code": "036710",
-   "symbol": "036710.KQ",
-   "name": "심텍홀딩스",
-   "market": "KOSDAQ",
-   "price": 5920,
-   "pctHigh": -12.94,
-   "pctLow": 191.63
+   "price": 25500,
+   "pctHigh": -12.52,
+   "pctLow": 115.92
   },
   {
    "code": "033560",
    "symbol": "033560.KQ",
    "name": "블루콤",
    "market": "KOSDAQ",
-   "price": 5830,
-   "pctHigh": -14.01,
-   "pctLow": 117.13
+   "price": 5860,
+   "pctHigh": -13.57,
+   "pctLow": 118.25
+  },
+  {
+   "code": "280360",
+   "symbol": "280360.KS",
+   "name": "롯데웰푸드",
+   "market": "KOSPI",
+   "price": 132900,
+   "pctHigh": -14.26,
+   "pctLow": 47.67
+  },
+  {
+   "code": "012030",
+   "symbol": "012030.KS",
+   "name": "DB",
+   "market": "KOSPI",
+   "price": 2260,
+   "pctHigh": -14.39,
+   "pctLow": 79.79
   },
   {
    "code": "143240",
@@ -297,81 +306,90 @@
    "symbol": "137080.KQ",
    "name": "나래나노텍",
    "market": "KOSDAQ",
-   "price": 7020,
-   "pctHigh": -14.7,
-   "pctLow": 145.45
-  },
-  {
-   "code": "263860",
-   "symbol": "263860.KQ",
-   "name": "지니언스",
-   "market": "KOSDAQ",
-   "price": 38200,
-   "pctHigh": -15.11,
-   "pctLow": 247.27
-  },
-  {
-   "code": "280360",
-   "symbol": "280360.KS",
-   "name": "롯데웰푸드",
-   "market": "KOSPI",
-   "price": 131400,
-   "pctHigh": -15.23,
-   "pctLow": 46.0
-  },
-  {
-   "code": "204620",
-   "symbol": "204620.KQ",
-   "name": "글로벌텍스프리",
-   "market": "KOSDAQ",
-   "price": 6120,
-   "pctHigh": -15.35,
-   "pctLow": 54.74
-  },
-  {
-   "code": "028050",
-   "symbol": "028050.KS",
-   "name": "삼성E&A",
-   "market": "KOSPI",
-   "price": 59400,
-   "pctHigh": -15.5,
-   "pctLow": 156.59
-  },
-  {
-   "code": "029460",
-   "symbol": "029460.KS",
-   "name": "케이씨",
-   "market": "KOSPI",
-   "price": 45100,
-   "pctHigh": -15.7,
-   "pctLow": 91.1
-  },
-  {
-   "code": "377450",
-   "symbol": "377450.KQ",
-   "name": "리파인",
-   "market": "KOSDAQ",
-   "price": 14300,
-   "pctHigh": -17.34,
-   "pctLow": 69.83
-  },
-  {
-   "code": "086450",
-   "symbol": "086450.KQ",
-   "name": "동국제약",
-   "market": "KOSDAQ GLOBAL",
-   "price": 25750,
-   "pctHigh": -17.6,
-   "pctLow": 58.36
+   "price": 6950,
+   "pctHigh": -15.55,
+   "pctLow": 143.01
   },
   {
    "code": "241710",
    "symbol": "241710.KQ",
    "name": "코스메카코리아",
    "market": "KOSDAQ GLOBAL",
-   "price": 127600,
-   "pctHigh": -17.94,
-   "pctLow": 102.86
+   "price": 130000,
+   "pctHigh": -16.4,
+   "pctLow": 106.68
+  },
+  {
+   "code": "204620",
+   "symbol": "204620.KQ",
+   "name": "글로벌텍스프리",
+   "market": "KOSDAQ",
+   "price": 6040,
+   "pctHigh": -16.46,
+   "pctLow": 52.72
+  },
+  {
+   "code": "136660",
+   "symbol": "136660",
+   "name": "큐엠씨",
+   "market": "KONEX",
+   "price": 2300,
+   "pctHigh": -16.67,
+   "pctLow": 125.49
+  },
+  {
+   "code": "377450",
+   "symbol": "377450.KQ",
+   "name": "리파인",
+   "market": "KOSDAQ",
+   "price": 14390,
+   "pctHigh": -16.82,
+   "pctLow": 70.9
+  },
+  {
+   "code": "028050",
+   "symbol": "028050.KS",
+   "name": "삼성E&A",
+   "market": "KOSPI",
+   "price": 58100,
+   "pctHigh": -17.35,
+   "pctLow": 150.97
+  },
+  {
+   "code": "036710",
+   "symbol": "036710.KQ",
+   "name": "심텍홀딩스",
+   "market": "KOSDAQ",
+   "price": 5600,
+   "pctHigh": -17.65,
+   "pctLow": 175.86
+  },
+  {
+   "code": "029460",
+   "symbol": "029460.KS",
+   "name": "케이씨",
+   "market": "KOSPI",
+   "price": 44050,
+   "pctHigh": -17.66,
+   "pctLow": 86.65
+  },
+  {
+   "code": "134060",
+   "symbol": "134060.KQ",
+   "name": "이퓨쳐",
+   "market": "KOSDAQ",
+   "price": 5550,
+   "pctHigh": -17.78,
+   "pctLow": 57.22
+  },
+  {
+   "code": "067920",
+   "symbol": "067920.KQ",
+   "name": "이글루",
+   "market": "KOSDAQ",
+   "price": 7090,
+   "pctHigh": -18.51,
+   "pctLow": 54.13
   },
   {
    "code": "191600",
@@ -383,40 +401,31 @@
    "pctLow": 142.37
   },
   {
-   "code": "067920",
-   "symbol": "067920.KQ",
-   "name": "이글루",
-   "market": "KOSDAQ",
-   "price": 7010,
-   "pctHigh": -19.43,
-   "pctLow": 52.39
-  },
-  {
-   "code": "134060",
-   "symbol": "134060.KQ",
-   "name": "이퓨쳐",
-   "market": "KOSDAQ",
-   "price": 5430,
-   "pctHigh": -19.56,
-   "pctLow": 53.82
-  },
-  {
-   "code": "008930",
-   "symbol": "008930.KS",
-   "name": "한미사이언스",
-   "market": "KOSPI",
-   "price": 54400,
-   "pctHigh": -20.58,
-   "pctLow": 112.5
-  },
-  {
    "code": "121440",
    "symbol": "121440.KQ",
    "name": "골프존홀딩스",
    "market": "KOSDAQ",
-   "price": 8160,
-   "pctHigh": -20.78,
-   "pctLow": 99.51
+   "price": 8210,
+   "pctHigh": -20.29,
+   "pctLow": 100.73
+  },
+  {
+   "code": "086450",
+   "symbol": "086450.KQ",
+   "name": "동국제약",
+   "market": "KOSDAQ GLOBAL",
+   "price": 24750,
+   "pctHigh": -20.8,
+   "pctLow": 52.21
+  },
+  {
+   "code": "070590",
+   "symbol": "070590.KQ",
+   "name": "인티큐브",
+   "market": "KOSDAQ",
+   "price": 2665,
+   "pctHigh": -22.3,
+   "pctLow": 82.91
   },
   {
    "code": "000400",
@@ -428,22 +437,31 @@
    "pctLow": 61.17
   },
   {
+   "code": "361670",
+   "symbol": "361670.KQ",
+   "name": "삼영에스앤씨",
+   "market": "KOSDAQ",
+   "price": 3990,
+   "pctHigh": -22.67,
+   "pctLow": 76.55
+  },
+  {
+   "code": "008930",
+   "symbol": "008930.KS",
+   "name": "한미사이언스",
+   "market": "KOSPI",
+   "price": 52800,
+   "pctHigh": -22.92,
+   "pctLow": 106.25
+  },
+  {
    "code": "161890",
    "symbol": "161890.KS",
    "name": "한국콜마",
    "market": "KOSPI",
-   "price": 127400,
-   "pctHigh": -23.21,
-   "pctLow": 110.23
-  },
-  {
-   "code": "070590",
-   "symbol": "070590.KQ",
-   "name": "인티큐브",
-   "market": "KOSDAQ",
-   "price": 2620,
-   "pctHigh": -23.62,
-   "pctLow": 79.82
+   "price": 127300,
+   "pctHigh": -23.27,
+   "pctLow": 110.07
   }
  ]
 }
