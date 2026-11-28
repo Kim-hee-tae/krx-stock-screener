@@ -1,4 +1,4 @@
-// 한국 표준시(KST) 갱신 시각: 2026-11-28 02:58:16
+// 한국 표준시(KST) 갱신 시각: 2026-11-28 10:21:16
 const KR_DB = [
   { symbol: '067010.KQ', name: '이씨에스', market: 'KOSDAQ' },
   { symbol: '089860.KS', name: '롯데렌탈', market: 'KOSPI' },
